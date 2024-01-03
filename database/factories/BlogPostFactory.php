@@ -17,6 +17,8 @@ class BlogPostFactory extends Factory
     public function definition(): array
     {
         return [
+            'user_id' => '1',
+            'slug' => fake()->jobTitle(),
             'main_title' => fake()->jobTitle(),
             'topic_title' => fake()->unique()->jobTitle(),
             'content' => fake()->realText($maxNbChars = 200, $indexSize = 2),
